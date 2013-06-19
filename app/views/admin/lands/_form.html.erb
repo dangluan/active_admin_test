@@ -1,0 +1,12 @@
+<%= google_map_api_js("AIzaSyA344yCug0-GhjW3XJyZmkLWLN_qtA_ziM") %>
+<%= semantic_form_for [:admin, @land] do |f| %>
+  <%= f.inputs do%>
+		<%= f.input :title%>
+		<li class="string input optional stringish"><%= show_map_helper @land, {zoom: 10, latitude: 10.823099, longitude: 106.629664, allow: 'point', searchbox: 'show', width: 400, height: 200, searchbox_width: 300} %></li>
+	<% end%>
+	
+	
+  <%= f.actions do %>
+		<%= f.submit%>
+	<% end%>
+<% end %>

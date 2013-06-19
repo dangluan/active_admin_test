@@ -1,0 +1,11 @@
+<%= semantic_form_for [:admin, @attachment] do |f| %>
+  <%= f.inputs do%>
+		<%= f.input :name%>
+		<li class="string input optional stringish"><%= show_gallery_images @attachment%></li>
+	<% end%>
+	
+	
+  <%= f.actions do %>
+		<%= f.submit%>
+	<% end%>
+<% end %>
